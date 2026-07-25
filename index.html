@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Feliz Día del Amigo Doc!</title>
+    <title>¡Feliz Día del Amigo!</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -51,11 +51,22 @@
             padding: 15px;
             border-left: 4px solid #ff5722;
             background-color: #fafafa;
-            text-align: left;
+            text-align: center;
             animation: fadeIn 0.5s;
         }
         .show {
             display: block;
+        }
+        /* Estilo nuevo para que la imagen se vea bien en el celular */
+        .pista-imagen {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -77,7 +88,11 @@
     <div class="clue-container">
         <button onclick="revelarPista('pistaFinal')">Pista Final</button>
         <div id="pistaFinal" class="clue-text">
-            [AQUÍ VA EL TEXTO DE TU PISTA FINAL]
+            Creo que ya use una vez esta pista pero nuestra canción es: <br><br>
+            <strong>Fetish de Selena Gómez ‧ 2017</strong>
+            
+            <!-- Etiqueta de la imagen -->
+            <img src="https://upload.wikimedia.org/wikipedia/en/2/23/Selena_Gomez_-_Fetish.png" alt="Fetish - Selena Gomez" class="pista-imagen">
         </div>
     </div>
 
