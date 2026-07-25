@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Día del Amigo Doc!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        h1 {
+            color: #ff5722;
+            font-size: 2.8em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .clue-container {
+            margin: 20px auto;
+            max-width: 90%;
+            width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        button {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #1976D2;
+        }
+        .clue-text {
+            display: none;
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #444;
+            padding: 15px;
+            border-left: 4px solid #ff5722;
+            background-color: #fafafa;
+            text-align: left;
+            animation: fadeIn 0.5s;
+        }
+        .show {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¡Feliz Día del Amigo!</h1>
+
+    <div class="clue-container">
+        <button onclick="revelarPista('pista1')">Primera Pista</button>
+        <div id="pista1" class="clue-text">
+            [AQUÍ VA EL TEXTO DE TU PRIMERA PISTA]
+        </div>
+    </div>
+
+    <div class="clue-container">
+        <button onclick="revelarPista('pistaFinal')">Pista Final</button>
+        <div id="pistaFinal" class="clue-text">
+            [AQUÍ VA EL TEXTO DE TU PISTA FINAL]
+        </div>
+    </div>
+
+    <script>
+        function revelarPista(id) {
+            var elemento = document.getElementById(id);
+            // Alterna entre mostrar y ocultar
+            elemento.classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>
